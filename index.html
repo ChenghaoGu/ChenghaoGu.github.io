@@ -1,547 +1,159 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Your Name | Computer Science Student</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Times</title>
+  
+  <meta name="author" content="Times">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal homepage of Your Name, a computer science student interested in programming and machine learning.">
-
-  <style>
-    :root {
-      --bg: #f7f7fb;
-      --bg-alt: #ffffff;
-      --text: #222222;
-      --text-soft: #555555;
-      --accent: #4a6cf7;
-      --accent-soft: #e0e6ff;
-      --border: #e0e0e5;
-      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
-      --radius-lg: 18px;
-      --radius-sm: 10px;
-      --max-width: 960px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #edf2ff 0, #f7f7fb 48%, #f9fafb 100%);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: var(--max-width);
-      margin: 40px auto 80px auto;
-      padding: 0 20px;
-    }
-
-    /* Header */
-    .top-card {
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 26px;
-      padding: 26px 26px 22px 26px;
-      margin-bottom: 28px;
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.8);
-    }
-
-    .top-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .avatar {
-      width: 90px;
-      height: 90px;
-      border-radius: 28px;
-      background: linear-gradient(135deg, #4a6cf7, #9b6bff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      font-size: 32px;
-      font-weight: 700;
-      box-shadow: 0 14px 40px rgba(79, 70, 229, 0.45);
-      flex-shrink: 0;
-    }
-
-    .header-text {
-      flex: 1 1 220px;
-      min-width: 0;
-    }
-
-    .name {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      margin-bottom: 4px;
-    }
-
-    .title-line {
-      font-size: 15px;
-      color: var(--text-soft);
-      margin-bottom: 10px;
-    }
-
-    .meta-line {
-      font-size: 14px;
-      color: var(--text-soft);
-    }
-
-    .meta-line span + span::before {
-      content: "•";
-      margin: 0 8px;
-      color: #c0c0c8;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .pill-link {
-      font-size: 13px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      text-decoration: none;
-      color: var(--text-soft);
-      transition: all 0.15s ease;
-    }
-
-    .pill-link:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      box-shadow: 0 8px 18px rgba(79, 70, 229, 0.14);
-      text-decoration: none;
-    }
-
-    .pill-link svg {
-      width: 14px;
-      height: 14px;
-    }
-
-    nav {
-      margin-top: 16px;
-      border-top: 1px solid rgba(224, 224, 229, 0.7);
-      padding-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 13px;
-    }
-
-    nav a {
-      padding: 6px 10px;
-      border-radius: 999px;
-      text-decoration: none;
-      color: var(--text-soft);
-      background: transparent;
-      border: 1px solid transparent;
-      transition: all 0.15s ease;
-    }
-
-    nav a:hover {
-      background: var(--accent-soft);
-      border-color: var(--accent-soft);
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    /* Sections */
-    section {
-      background: var(--bg-alt);
-      border-radius: var(--radius-lg);
-      padding: 22px 22px 20px 22px;
-      margin-bottom: 20px;
-      border: 1px solid var(--border);
-    }
-
-    section h2 {
-      font-size: 18px;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    section h2 span.icon {
-      font-size: 17px;
-    }
-
-    section p {
-      font-size: 14px;
-      color: var(--text-soft);
-      margin-bottom: 8px;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 4px;
-    }
-
-    li {
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      margin-left: 6px;
-      vertical-align: baseline;
-    }
-
-    .sub {
-      font-size: 13px;
-      color: var(--text-soft);
-    }
-
-    .item-title {
-      font-weight: 600;
-    }
-
-    .item-meta {
-      font-size: 12px;
-      color: #888;
-      margin-top: 1px;
-    }
-
-    .grid-two {
-      display: grid;
-      grid-template-columns: 2.2fr 1.4fr;
-      gap: 14px;
-    }
-
-    .chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .chip {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: #f2f3fb;
-      color: #555a75;
-    }
-
-    .highlight-box {
-      border-radius: var(--radius-sm);
-      border: 1px dashed #d7d7e2;
-      padding: 10px 11px;
-      background: #fafbff;
-      font-size: 13px;
-      color: var(--text-soft);
-      margin-top: 8px;
-    }
-
-    footer {
-      max-width: var(--max-width);
-      margin: 0 auto 40px auto;
-      padding: 0 20px;
-      font-size: 12px;
-      color: #9a9aaf;
-      text-align: center;
-    }
-
-    @media (max-width: 720px) {
-      main {
-        margin-top: 24px;
-      }
-      .top-card {
-        padding: 18px 16px 14px 16px;
-      }
-      .avatar {
-        width: 70px;
-        height: 70px;
-        font-size: 24px;
-      }
-      .name {
-        font-size: 22px;
-      }
-      .grid-two {
-        grid-template-columns: 1fr;
-      }
-      section {
-        padding: 18px 16px 16px 16px;
-      }
-    }
-
-  </style>
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <!-- favicon，可以换成你自己的图片 -->
+  <link rel="icon" type="image/png" href="images/steel_ball.png">
 </head>
+
 <body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <!-- ========== Header / Name / Intro ========== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p style="text-align:center">
+                    <name>Times</name>
+                  </p>
+                  <p>
+                    I am a graduate student in Computer Science, focusing on
+                    <strong>Embodied AI</strong>, <strong>spatial understanding</strong>, and
+                    <strong>robot learning</strong>.
+                    I enjoy designing benchmarks and systems that connect vision, language,
+                    and robot actions.
+                  </p>
+                  <p>
+                    My current research interests include spatial instruction following,
+                    3D scene understanding, and data generation for robot manipulation.
+                    I like to build practical pipelines that go from simulation or images
+                    all the way to executable robot motions.
+                  </p>
+                  <p style="text-align:center">
+                    <!-- 下面这些链接你可以换成自己的 -->
+                    <a href="mailto:your.email@example.com">Email</a> &nbsp/&nbsp
+                    <a href="data/Times-CV.pdf">CV</a> &nbsp/&nbsp
+                    <a href="https://scholar.google.com">Google Scholar</a> &nbsp/&nbsp
+                    <a href="https://github.com/your-github-id">Github</a> &nbsp/&nbsp
+                    <a href="https://x.com">Twitter</a>
+                  </p>
+                </td>
+                <td style="padding:2.5%;width:40%;max-width:40%">
+                  <!-- 头像图片，记得换成你自己的路径 -->
+                  <a href="images/profile.png">
+                    <img style="width:100%;max-width:100%" alt="profile photo"
+                         src="images/profile.png" class="hoverZoomLink">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-<main>
-  <!-- ===== Header / Intro Card ===== -->
-  <header class="top-card">
-    <div class="top-row">
-      <!-- Avatar with initials -->
-      <div class="avatar">
-        <!-- TODO: Put your initials here -->
-        YN
-      </div>
+          <!-- ========== Research Interests ========== -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:20px;width:100%;vertical-align:middle">
+                  <heading>Research Interests</heading>
+                  <p>
+                    My research focuses on <strong>Embodied AI</strong>,
+                    <strong>3D vision</strong>, and <strong>spatial reasoning</strong> for robots.
+                    I am especially interested in:
+                  </p>
+                  <ul>
+                    <li>Spatial understanding for vision–language–action models.</li>
+                    <li>3D reconstruction and simulation for robot learning.</li>
+                    <li>Automatic task and dataset generation for manipulation benchmarks.</li>
+                  </ul>
+                  <p>
+                    In short, I want robots to not only see the world, but also understand
+                    where things are, how they move, and how to interact with them safely
+                    and reliably.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-      <div class="header-text">
-        <div class="name">Your Name</div>
-        <div class="title-line">
-          Computer Science Student @ Your University
-        </div>
-        <div class="meta-line">
-          <span>Interests: programming, machine learning, and systems</span>
-          <span>Based in Somewhere</span>
-        </div>
+          <!-- =================  Publications section REMOVED  ================= -->
+          <!-- 已按你的要求删除整块 Publications 及所有论文条目 -->
 
-        <div class="links">
-          <!-- TODO: Update these links -->
-          <a class="pill-link" href="mailto:your.email@university.edu">
-            <!-- mail icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 
-              2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v.01L12 13l8-5V8H4zm0 2.25V16h16v-5.75l-7.42 
-              4.64a1.5 1.5 0 0 1-1.56 0L4 10.25z"/>
-            </svg>
-            your.email@university.edu
-          </a>
+          <!-- ========== Activities / Service / Teaching ========== -->
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <heading>Activities and Teaching</heading>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-          <a class="pill-link" href="https://github.com/your-username" target="_blank" rel="noopener">
-            <!-- github icon (simplified) -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48 
-              0-.24-.01-.87-.01-1.71-2.49.46-3.01-1.2-3.01-1.2-.45-1.13-1.11-1.43-1.11-1.43-.9-.61.07-.6.07-.6 
-              1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-1.99-.23-4.09-1-4.09-4.45 
-              0-.98.35-1.78.93-2.41-.09-.23-.4-1.15.09-2.39 0 0 .75-.24 2.45.92A8.45 8.45 0 0 1 12 6.84a8.5 8.5 0 0 1 
-              2.23.3c1.7-1.16 2.45-.92 2.45-.92.49 1.24.18 2.16.09 2.39.58.63.93 1.43.93 2.41 
-              0 3.46-2.1 4.22-4.11 4.45.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10 10 0 0 0 12 2z"/>
-            </svg>
-            GitHub
-          </a>
+          <table width="100%" align="center" border="0" cellpadding="20">
+            <tbody>
 
-          <a class="pill-link" href="https://www.linkedin.com/in/your-link" target="_blank" rel="noopener">
-            <!-- link icon -->
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="currentColor" d="M7 6a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3 9h4v9H3zM9 
-              9h3.6v1.35h.05c.5-.9 1.7-1.85 3.5-1.85 3.75 0 4.45 2.45 4.45 5.6V18h-4v-3.35c0-.8-.02-1.85-1.15-1.85-1.15 
-              0-1.35.9-1.35 1.8V18H9z"/>
-            </svg>
-            LinkedIn
-          </a>
-        </div>
-      </div>
-    </div>
+              <table width="90%" align="center" border="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td width="100%" valign="center">
+                      <strong>Teaching / Mentoring</strong>
+                      <ul>
+                        <li>Helping classmates and friends with Python programming and basic machine learning.</li>
+                        <li>Assisting in small study groups on embodied AI and robotics papers.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
 
-    <nav>
-      <!-- Anchor links to sections below -->
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#projects">Projects</a>
-      <a href="#service">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+              <table width="90%" align="center" border="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td width="100%" valign="center">
+                      <strong>Other Activities</strong>
+                      <ul>
+                        <li>Working on research projects related to spatial instruction following for robots.</li>
+                        <li>Building experimental pipelines that connect simulation (USD/ROS2) with data collection and RL.</li>
+                        <li>Participating in reading groups on embodied AI, 3D vision, and large models.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
 
-  <!-- ===== About Section ===== -->
-  <section id="about">
-    <h2><span class="icon">👋</span>About</h2>
-    <p>
-      I am a computer science student at <strong>Your University</strong>. 
-      I enjoy writing code, understanding how things work,
-      and building small tools that can really run on my own machine.
-    </p>
-    <p>
-      Right now, I am learning <strong>Python</strong> and basic
-      <strong>machine learning</strong>. I also like systems topics such as
-      operating systems and computer networks. I learn best by doing projects:
-      simple ideas, but with clean code and clear structure.
-    </p>
-    <div class="highlight-box">
-      <strong>Currently:</strong> exploring open-source projects and
-      looking for chances to work on real-world coding problems.
-    </div>
-  </section>
+            </tbody>
+          </table>
 
-  <!-- ===== Education + Skills ===== -->
-  <section id="education">
-    <div class="grid-two">
-      <div>
-        <h2><span class="icon">🎓</span>Education</h2>
-        <ul>
-          <li>
-            <div class="item-title">
-              B.Sc. in Computer Science <span class="tag">2022 – 2026 (expected)</span>
-            </div>
-            <div class="item-meta">
-              Your University, School of Computer Science
-            </div>
-            <div class="sub">
-              Selected courses: Data Structures, Algorithms, Operating Systems,
-              Databases, Computer Networks, Machine Learning.
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2><span class="icon">🛠</span>Skills</h2>
-        <p class="sub">Some tools and languages I often use:</p>
-        <div class="chip-row">
-          <!-- TODO: adjust to your own stack -->
-          <span class="chip">Python</span>
-          <span class="chip">C++</span>
-          <span class="chip">Git &amp; GitHub</span>
-          <span class="chip">Linux</span>
-          <span class="chip">PyTorch</span>
-          <span class="chip">NumPy</span>
-          <span class="chip">Docker</span>
-          <span class="chip">HTML/CSS/JS</span>
-        </div>
-      </div>
-    </div>
-  </section>
+          <!-- ========== Footer ========== -->
+          <table width="100%" align="center" border="0" cellpadding="20">
+            <table width="90%" align="center" border="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td width="100%" valign="center">
+                    <br>
+                    <p style="text-align:center;font-size:small;">
+                      Template from <a href="https://jonbarron.info">Jon Barron</a>.
+                      Last updated in November 2025.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </table>
 
-  <!-- ===== Projects ===== -->
-  <section id="projects">
-    <h2><span class="icon">💻</span>Projects</h2>
-    <p class="sub">
-      Here are some projects I worked on in my free time or for classes.
-      Most of them are on my GitHub.
-    </p>
-    <ul>
-      <li>
-        <div class="item-title">
-          <a href="https://github.com/your-username/project-1" target="_blank" rel="noopener">
-            TinyML Notes – Simple ML Playground
-          </a>
-          <span class="tag">Python</span>
-          <span class="tag">ML</span>
-        </div>
-        <div class="item-meta">2024</div>
-        <div class="sub">
-          Implemented basic machine learning models (logistic regression,
-          small neural networks) using NumPy to understand training and
-          inference. Includes clear comments and small experiments.
-        </div>
-      </li>
-
-      <li>
-        <div class="item-title">
-          <a href="https://github.com/your-username/project-2" target="_blank" rel="noopener">
-            SimpleKV – Toy Key-Value Store
-          </a>
-          <span class="tag">C++</span>
-          <span class="tag">Systems</span>
-        </div>
-        <div class="item-meta">2024</div>
-        <div class="sub">
-          A small key-value store that supports put/get operations and
-          simple persistence, used to practice storage and system design
-          concepts.
-        </div>
-      </li>
-
-      <li>
-        <div class="item-title">
-          <a href="https://github.com/your-username/project-3" target="_blank" rel="noopener">
-            Algo Visualizer – Algorithms in the Browser
-          </a>
-          <span class="tag">Web</span>
-          <span class="tag">Teaching</span>
-        </div>
-        <div class="item-meta">2023</div>
-        <div class="sub">
-          A small website that shows sorting and graph algorithms step by step.
-          Built with plain JavaScript and HTML canvas to better understand
-          algorithm behavior.
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ===== Experience ===== -->
-  <section id="service">
-    <h2><span class="icon">📌</span>Experience</h2>
-    <ul>
-      <li>
-        <div class="item-title">
-          Teaching Assistant, Course Name
-          <span class="tag">TA</span>
-        </div>
-        <div class="item-meta">
-          Your University, 2024
-        </div>
-        <div class="sub">
-          Helped students with programming homework, answered questions on the
-          course forum, and gave simple code review advice.
-        </div>
-      </li>
-      <li>
-        <div class="item-title">
-          Open-Source Contributor
-          <span class="tag">GitHub</span>
-        </div>
-        <div class="sub">
-          Fixed small bugs and improved documentation in open-source projects
-          related to Python tools and student-friendly libraries.
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ===== Contact ===== -->
-  <section id="contact">
-    <h2><span class="icon">✉️</span>Contact</h2>
-    <p>
-      Email:
-      <a href="mailto:your.email@university.edu">your.email@university.edu</a>
-    </p>
-    <p>
-      More of my work:
-      <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>,
-      <a href="https://www.linkedin.com/in/your-link" target="_blank" rel="noopener">LinkedIn</a>.
-    </p>
-  </section>
-</main>
-
-<footer>
-  © <span id="year"></span> Your Name. Built with simple HTML &amp; CSS.
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>

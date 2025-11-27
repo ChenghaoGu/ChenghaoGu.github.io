@@ -2,49 +2,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="TODO: One-sentence description for IGen: Scalable Data Generation for Robot Learning from Open-World Images.">
-  <meta name="keywords" content="TODO: keywords, e.g., Robot Learning, Data Generation, Open-World Images, IGen">
+        content="IGen: Scalable Data Generation for Robot Learning from Open-World Images">
+  <meta name="keywords" content="Robot Learning, Data Generation, Open-World Images, Embodied AI, IGen">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IGen | Scalable Data Generation for Robot Learning from Open-World Images</title>
 
   <!-- Thumbnail for social media sharing -->
-  <meta property="og:image" content="media/thumbnail_igen.jpg"> <!-- TODO: put your own thumbnail path -->
+  <!-- TODO: replace with IGen thumbnail -->
+  <meta property="og:image" content="media/igen_thumbnail.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" href="media/thumbnail_igen.jpg" type="image/jpeg"> <!-- TODO: optional -->
+  <!-- TODO: replace with IGen favicon -->
+  <link rel="icon" href="media/igen_thumbnail.jpg" type="image/jpeg">
 
   <script>
     window.dataLayer = window.dataLayer || [];
   </script>
 
-  <!-- These update functions now just serve as placeholders for switching example videos/images. -->
   <script>
-    function updateExampleGroup1() {
-      var task = document.getElementById("group1-video-menu").value;
-      var video = document.getElementById("group1-video");
-      video.src = "media/videos/" + task + ".mp4";  // TODO: update folder + filenames
+    // TODO: update video file names / logic after you have real videos
+
+    function updateInTheWild() {
+      var task = document.getElementById("inthewild-video-menu").value;
+      console.log("updateInTheWild", task)
+
+      var video = document.getElementById("inthewild-video");
+      video.src = "media/videos/" + 
+                  task + 
+                  ".m4v";
       video.play();
     }
 
-    function updateExampleGroup2() {
-      var task = document.getElementById("group2-video-menu").value;
-      var video = document.getElementById("group2-video");
-      video.src = "media/videos/" + task + ".mp4";  // TODO: update folder + filenames
+    function updateBimanual() {
+      var task = document.getElementById("bimanual-video-menu").value;
+      console.log("updateBimanual", task)
+
+      var video = document.getElementById("bimanual-video");
+      video.src = "media/videos/" + 
+                  task + 
+                  ".m4v";
       video.play();
     }
 
-    function updateExampleGroup3() {
-      var task = document.getElementById("group3-video-menu").value;
-      var img = document.getElementById("group3-img");
-      img.src = "media/examples/" + task + ".jpg";  // TODO: update folder + filenames
+    function updateClothes() {
+      var task = document.getElementById("clothes-video-menu").value;
+      console.log("updateclothes", task)
 
-      var video = document.getElementById("group3-video");
-      video.src = "media/videos/" + task + ".mp4";  // TODO: update folder + filenames
+      var img = document.getElementById("clothes-img");
+      img.src = "media/fold-strategies/" + 
+                  task + 
+                  ".jpeg";
+
+      var video = document.getElementById("clothes-video");
+      video.src = "media/videos/fold-" + 
+                  task + 
+                  ".mp4";
       video.play();
     }
   </script>
 
-  <!-- Fonts and CSS (same as原模板，可直接用) -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
@@ -70,9 +86,8 @@
   <script src="./static/js/index.js"></script>
 </head>
 
-<body onload="updateExampleGroup1();updateExampleGroup2();">
+<body onload="updateInTheWild();updateBimanual();">
 
-<!-- ================== HERO / TITLE ================== -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-fullhd">
@@ -81,207 +96,142 @@
           <h1 class="title is-1 publication-title">
             IGen: Scalable Data Generation for Robot Learning<br>from Open-World Images
           </h1>
+
+          <!-- TODO: fill in authors -->
           <div class="is-size-5 publication-authors">
-            <!-- TODO: fill author list -->
             <span class="author-block">
-              <a target="_blank" href="TODO-author1-homepage">Author Name 1</a><sup>1</sup>,
+              <a target="_blank" href="#">Author Name 1</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="TODO-author2-homepage">Author Name 2</a><sup>1*</sup>,
+              <a target="_blank" href="#">Author Name 2</a><sup>1*</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="TODO-author3-homepage">Author Name 3</a><sup>2*</sup>,
+              <a target="_blank" href="#">Author Name 3</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="TODO-author4-homepage">Author Name 4</a><sup>1</sup>,
+              <a target="_blank" href="#">Author Name 4</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="TODO-author5-homepage">Author Name 5</a><sup>1</sup>
+              <a target="_blank" href="#">Author Name 5</a><sup>1</sup>
             </span>
           </div>
 
+          <!-- TODO: fill in affiliations -->
           <div class="is-size-5 affiliation">
-            <!-- TODO: fill affiliations -->
-            <sup>1</sup> TODO: Institution 1,
-            <sup>2</sup> TODO: Institution 2
+            <sup>1</sup>Affiliation 1,&nbsp;
+            <sup>2</sup>Affiliation 2
           </div>
           <br>
           <div class="affiliation-note">
-            <!-- TODO: note for equal contribution / corresponding author -->
-            <sup>*</sup> indicates equal contributions (TODO: edit if needed)
+            <sup>*</sup> indicates equal contributions <!-- TODO: edit if needed -->
           </div>
 
+          <!-- TODO: update links to real resources -->
           <div class="button-container">
-            <!-- TODO: replace links after you have pdf / arxiv / video / code -->
-            <a href="TODO-igen-paper.pdf" target="_blank" class="button">
-              <i class="fa-light fa-file"></i>&emsp14;PDF
+            <a href="#" target="_blank" class="button">
+              <i class="fa-light fa-file"></i>&emsp14;PDF (TODO)
             </a>
-            <a href="TODO-arxiv-link" target="_blank" class="button">
-              <i class="ai ai-arxiv"></i>&emsp14;arXiv
+            <a href="#" target="_blank" class="button">
+              <i class="ai ai-arxiv"></i>&emsp14;arXiv (TODO)
             </a>
-            <a href="TODO-youtube-link" target="_blank" class="button">
-              <i class="fa-light fa-film"></i>&emsp14;Video
+            <a href="#" target="_blank" class="button">
+              <i class="fa-light fa-film"></i>&emsp14;Video (TODO)
             </a>
-            <a href="TODO-twitter-link" target="_blank" class="button">
-              <i class="fa-brands fa-x-twitter"></i>&emsp14;tl;dr
+            <a href="#" target="_blank" class="button">
+              <i class="fa-brands fa-x-twitter"></i>&emsp14;tl;dr Thread (TODO)
             </a>
-            <a href="TODO-github-link" target="_blank" class="button">
-              <i class="fa-light fa-code"></i>&emsp14;Code
+            <a href="#" target="_blank" class="button">
+              <i class="fa-light fa-code"></i>&emsp14;Code (TODO)
             </a>
           </div>
+
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================== TEASER ================== -->
 <section class="hero teaser">
   <div class="container is-max-widescreen">
     <div class="hero-body">
       <div class="container">
         <div class="columns is-vcentered is-centered">
-          <!-- TODO: replace teaser.mp4 with your main demo video -->
+          <!-- TODO: replace teaser video -->
           <video id="teaser" autoplay muted loop controls height="100%" width="100%">
-            <source src="media/videos/igen_teaser.mp4" type="video/mp4">
+            <source src="media/videos/igen_teaser.mp4"
+                    type="video/mp4">
           </video>
           </br>
         </div>
         <br>
         <h2 class="subtitle has-text-centered">
-          <!-- TODO: 1–2 sentences explaining what IGen does, in plain English. -->
-          [TODO] Short teaser text: describe how IGen generates robot learning data
-          from diverse open-world images and converts them into trajectories usable
-          for training policies.
+          <!-- TODO: short one-sentence IGen summary -->
+          [TODO] One-sentence summary of IGen: what it does and why it is useful for robot learning.
         </h2>
       </div>
     </div>
   </div>
 
-  <!-- ================== ABSTRACT ================== -->
   <div class="container is-max-widescreen">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: paste your real abstract here -->
+          <!-- TODO: paste IGen abstract here -->
           <p>
-            [TODO] Put your official paper abstract here.
-            You can keep the same wording as the arXiv / conference version.
+            [TODO] Write the abstract of IGen here. Summarize:
+            (1) the problem (robot learning data from open-world images),
+            (2) the key idea of IGen (scalable data generation pipeline),
+            (3) how the system works (high-level),
+            and (4) main results and contributions.
           </p>
         </div>
       </div>
     </div>
 
     <hr class="rounded">
-    <!-- ================== WALKTHROUGH VIDEO ================== -->
     <div class="rows">
       <h2 class="title is-3">Walkthrough Video</h2>
+      <!-- TODO: replace YouTube link -->
       <div class="publication-video">
-        <!-- TODO: replace with your YouTube embed link -->
-        <iframe src="https://www.youtube.com/embed/TODO_IGEN_VIDEO_ID"
-                allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/XXXXXXXXXXXXXXXXX"
+                allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
       </div>
     </div>
 
     <hr class="rounded">
-    <!-- ================== OVERVIEW ================== -->
     <div class="rows">
       <h2 class="title is-3">Overview of IGen</h2>
-      <!-- TODO: replace this figure path with your method figure -->
-      <img src="media/figures/igen_overview.jpg" class="method-image" />
+      <!-- TODO: replace method figure -->
+      <img src="media/figures/igen_method.jpg" class="method-image" />
       <p class="content has-text-justified">
-        [TODO] Briefly describe the IGen pipeline here:
-        how open-world images are processed (e.g., segmentation, 3D reconstruction,
-        spatial annotation), how robot trajectories are synthesized, and how
-        generated data is used to train or evaluate robot policies.
+        [TODO] Describe the main pipeline of IGen here.
+        For example:
+        - Input: open-world images and high-level instructions.
+        - Processing: scene understanding, 3D/point-cloud reconstruction, task synthesis, and trajectory generation.
+        - Output: large-scale multi-modal data for robot learning (images, actions, language, etc.).
+        <b>[TODO] Add one bold sentence highlighting “no human teleoperation” or other key advantage.</b>
       </p>
     </div>
 
     <hr class="rounded">
-    <!-- ================== EXAMPLES GROUP 1 ================== -->
     <div class="rows">
-      <h2 class="title is-3">Generated Data for Diverse Scenes</h2>
-
+      <h2 class="title is-3">Example Robot Learning Tasks</h2>
       <p class="content has-text-justified">
-        [TODO] Explain what this section shows:
-        e.g., IGen generating data across indoor / outdoor / simulated / artistic
-        scenes, and how these scenes are converted into consistent robot-centric
-        observations.
+        [TODO] Explain what kinds of tasks IGen supports
+        (e.g., tabletop manipulation, tool use, multi-stage tasks, indoor scenes, industrial scenes).
       </p>
 
+      <!-- 你可以把这一块当成“多任务演示”的控件，保留结构，后面直接换视频文件名即可 -->
       <div class="columns">
         <div class="column has-text-centered">
           <div class="select is-rounded">
-            <!-- TODO: change option values to match your video filenames -->
-            <select id="group1-video-menu" onchange="updateExampleGroup1()">
-              <option value="example_scene_1" selected="selected">Example Scene 1</option>
-              <option value="example_scene_2">Example Scene 2</option>
-              <option value="example_scene_3">Example Scene 3</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column has-text-centered">
-          <video id="group1-video" width="100%" height="100%" controls autoplay loop muted>
-            <source src="media/videos/example_scene_1.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-
-    <hr class="rounded">
-    <!-- ================== EXAMPLES GROUP 2 ================== -->
-    <div class="rows">
-      <h2 class="title is-3">Robot Learning from IGen Data</h2>
-      <p class="content has-text-justified">
-        [TODO] Describe how policies are trained or evaluated using IGen-generated
-        data, and what kind of tasks (e.g., pouring, stacking, placing) are
-        demonstrated here.
-      </p>
-
-      <div class="columns">
-        <div class="column has-text-centered">
-          <div class="select is-rounded">
-            <!-- TODO: change to your real task names + filenames -->
-            <select id="group2-video-menu" onchange="updateExampleGroup2()">
-              <option value="robot_task_1" selected="selected">Robot Task 1</option>
-              <option value="robot_task_2">Robot Task 2</option>
-              <option value="robot_task_3">Robot Task 3</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column has-text-centered">
-          <video id="group2-video" width="100%" height="100%" controls autoplay loop muted>
-            <source src="media/videos/robot_task_1.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-
-    <hr class="rounded">
-    <!-- ================== EXAMPLES GROUP 3 ================== -->
-    <div class="rows">
-      <h2 class="title is-3">Visualization of Generated Trajectories</h2>
-      <p class="content has-text-justified">
-        [TODO] Use this section to show visualizations of point clouds, keypoints,
-        or 3D trajectories produced by IGen. Explain what the colors / lines mean
-        and how they relate to spatial reasoning.
-      </p>
-
-      <div class="columns">
-        <div class="column has-text-centered">
-          <div class="select is-rounded">
-            <!-- TODO: edit garment/task names and filenames as needed -->
-            <select id="group3-video-menu" onchange="updateExampleGroup3()">
-              <option value="trajectory_1" selected="selected">Trajectory Example 1</option>
-              <option value="trajectory_2">Trajectory Example 2</option>
-              <option value="trajectory_3">Trajectory Example 3</option>
+            <select id="bimanual-video-menu" onchange="updateBimanual()">
+              <!-- TODO: change task names and values -->
+              <option value="task-1" selected="selected">Task 1 (TODO: name)</option>
+              <option value="task-2">Task 2 (TODO: name)</option>
+              <option value="task-3">Task 3 (TODO: name)</option>
             </select>
           </div>
         </div>
@@ -290,16 +240,9 @@
       <div class="columns">
         <div class="column has-text-centered">
           <p style="text-align:center;">
-            <!-- TODO: replace example image -->
-            <img id="group3-img" width="60%"
-                 src="media/examples/trajectory_1.jpg"
-                 class="method-image" />
-          </p>
-        </div>
-        <div class="column has-text-centered">
-          <p style="text-align:center;">
-            <video id="group3-video" width="100%" height="100%" controls autoplay loop muted>
-              <source src="media/videos/trajectory_1.mp4" type="video/mp4">
+            <!-- TODO: replace default video -->
+            <video id="bimanual-video" width="100%" height="100%" controls autoplay loop muted>
+              <source src="media/videos/task-1.m4v" type="video/mp4">
             </video>
           </p>
         </div>
@@ -307,27 +250,99 @@
     </div>
 
     <hr class="rounded">
-    <!-- ================== ACKNOWLEDGMENTS ================== -->
+    <div class="rows">
+      <h2 class="title is-3">In-The-Wild Generation from Images</h2>
+      <p class="content has-text-justified">
+        [TODO] Describe how IGen uses open-world images (web images / single snapshots) 
+        to generate robot data. Mention scenes: home, office, industrial, outdoor, etc.
+      </p>
+
+      <div class="columns">
+        <div class="column has-text-centered">
+          <div class="select is-rounded">
+            <select id="inthewild-video-menu" onchange="updateInTheWild()">
+              <!-- TODO: change task names and values -->
+              <option value="inwild-1" selected="selected">In-the-Wild Task 1 (TODO)</option>
+              <option value="inwild-2">In-the-Wild Task 2 (TODO)</option>
+              <option value="inwild-3">In-the-Wild Task 3 (TODO)</option>
+              <option value="inwild-4">In-the-Wild Task 4 (TODO)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p style="text-align:center;">
+            <!-- TODO: replace default video -->
+            <video id="inthewild-video" width="100%" height="100%" controls autoplay loop muted>
+              <source src="media/videos/inwild-1.m4v" type="video/mp4">
+            </video>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="rounded">
+    <div class="rows">
+      <h2 class="title is-3">Scene and Strategy Diversity</h2>
+      <p class="content has-text-justified">
+        [TODO] Use this section to show different strategies, layouts, or object categories
+        generated by IGen (e.g., different tools, containers, layouts, etc.).
+      </p>
+
+      <div class="columns">
+        <div class="column has-text-centered">
+          <div class="select is-rounded">
+            <select id="clothes-video-menu" onchange="updateClothes()">
+              <!-- TODO: change to your own categories -->
+              <option value="scene-1" selected="selected">Scene Type 1 (TODO)</option>
+              <option value="scene-2">Scene Type 2 (TODO)</option>
+              <option value="scene-3">Scene Type 3 (TODO)</option>
+              <option value="scene-4">Scene Type 4 (TODO)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column has-text-centered">
+          <p style="text-align:center;">
+            <!-- TODO: replace with IGen strategy visualization -->
+            <img id="clothes-img" width="60%" src="media/fold-strategies/scene-1.jpeg" class="method-image" />
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <p style="text-align:center;">
+            <!-- TODO: replace with IGen demo video -->
+            <video id="clothes-video" width="100%" height="100%" controls autoplay loop muted>
+              <source src="media/videos/fold-scene-1.mp4" type="video/mp4">
+            </video>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="rounded">
     <h2 class="title is-3">Acknowledgments</h2>
     <p>
-      [TODO] Acknowledge funding agencies, advisors, collaborators, and
-      any labs or institutes that supported the IGen work.
+      [TODO] Add acknowledgments here:
+      funding agencies, advisors, collaborators, lab members, and hardware support.
     </p>
 
     <hr class="rounded">
-    <!-- ================== BIBTEX ================== -->
     <h2 class="title is-3">BibTeX</h2>
     <p class="bibtex">
-      <!-- TODO: update with your real BibTeX entry -->
-      @article{TODO_igen_2025, <br>
+      <!-- TODO: fill in final BibTeX -->
+      @article{igen2025, <br>
       &nbsp;&nbsp;title = {IGen: Scalable Data Generation for Robot Learning from Open-World Images}, <br>
-      &nbsp;&nbsp;author = {TODO: Author 1 and Author 2 and Author 3 and ...}, <br>
-      &nbsp;&nbsp;journal = {TODO: Conference / Journal}, <br>
+      &nbsp;&nbsp;author = {TODO: Author, List, Here}, <br>
+      &nbsp;&nbsp;journal = {TODO: Conference or Journal}, <br>
       &nbsp;&nbsp;year = {2025} <br>
       }
     </p>
 
-  </div> <!-- container -->
+  </div>
 </section>
 
 <footer class="footer">
@@ -336,8 +351,12 @@
       <div class="column">
         <div class="content has-text-centered">
           <p>
-            Website template adapted from existing robotics project pages (e.g., Nerfies / DexCap / TRANSIC).<br>
-            [TODO] Update this line if you want to credit specific templates.
+            <!-- 可以保留模板来源说明，也可以改成自己的 -->
+            Website template adapted from
+            <a href="https://nerfies.github.io">Nerfies</a>,
+            <a href="https://dex-cap.github.io">DexCap</a>,
+            <a href="https://transic-robot.github.io">TRANSIC</a>,
+            and customized for <b>IGen</b>. <!-- TODO: edit if needed -->
           </p>
         </div>
       </div>

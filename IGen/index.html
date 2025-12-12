@@ -115,19 +115,19 @@
                 <div class="col-md-6 col-md-offset-3 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="[arXiv_PDF_LINK]">
+                            <a href="https://arxiv.org/pdf/2512.01773">
                             <image src="img/arXiv_icon.png" height="40px">
                                 <h4><strong>arXiv</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="[CODE_GITHUB_LINK]">
+                            <a href="https://github.com/ChenghaoGu/IGen_Robot">
                             <image src="img/github.png" height="40px">
                                 <h4><strong>Code</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="[VIDEO_LINK]">
+                            <a href="https://youtu.be/bypWdI8JYks">
                             <image src="img/video_icon.png" height="40px">
                                 <h4><strong>Video</strong></h4>
                             </a>
@@ -136,18 +136,53 @@
                 </div>
         </div>
         
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <video id="v0" width="100%" autoplay loop muted controls>
-                    <source src="video/1_IGen_Overview.mp4" type="video/mp4" />
+                    <source src="video/Website_Video_1.mp4" type="video/mp4" />
                   </video>
                 <p class="text-justify">
                 IGen is a scalable data generation system for robot learning from open-world images. Instead of relying on labor-intensive teleoperation, IGen takes diverse images from the real world and automatically synthesizes robot trajectories for various tasks.
                 With these generated data, we can train robot policies that transfer to real robots and perform effective manipulation in the real world — without any human teleoperation data.
                 </p>
             </div>
-        </div> 
-          
+        </div>  -->
+
+    
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- 移除controls，添加playsinline，设置pointer-events: none -->
+                <video width="100%" 
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline
+                        style="pointer-events: none; display: block;">
+                    <source src="video/Website_Video_1.mp4" type="video/mp4" />
+                </video>
+                <p class="text-justify">
+                    IGen is a scalable data generation system for robot learning from open-world images. Instead of relying on labor-intensive teleoperation, IGen takes diverse images from the real world and automatically synthesizes robot trajectories for various tasks.
+                    With these generated data, we can train robot policies that transfer to real robots and perform effective manipulation in the real world — without any human teleoperation data.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- 移除controls，添加playsinline，设置pointer-events: none -->
+                <video width="100%" 
+                        autoplay 
+                        loop 
+                        muted 
+                        playsinline
+                        style="pointer-events: none; display: block;">
+                    <source src="video/Website_Video_2.mp4" type="video/mp4" />
+                </video>
+                <p class="text-justify">
+                </p>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -159,6 +194,8 @@
             </div>
         </div>
   
+
+
 <br>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -172,6 +209,59 @@
             </div>
         </div>
 <br>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <!-- 移除controls，添加playsinline，设置pointer-events: none -->
+        <video width="100%" 
+                autoplay 
+                loop 
+                muted 
+                playsinline
+                style="pointer-events: none; display: block;">
+            <source src="video/Website_Video_3.mp4" type="video/mp4" />
+        </video>
+        <p class="text-justify">
+        </p>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <!-- 移除controls，添加playsinline，设置pointer-events: none -->
+        <video width="100%" 
+                autoplay 
+                loop 
+                muted 
+                playsinline
+                style="pointer-events: none; display: block;">
+            <source src="video/Website_Video_4.mp4" type="video/mp4" />
+        </video>
+        <p class="text-justify">
+            Starting from a captured real-world scene image, IGen automatically generates 1,000 task demonstrations with spatial randomization. The resulting data are used to train a visuomotor policy, which is later deployed and evaluated in the real world. The result suggest that IGen can serve as an effective and scalable alternative to human teleoperation for training robot policies.
+        </p>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <!-- 移除controls，添加playsinline，设置pointer-events: none -->
+        <video width="100%" 
+                autoplay 
+                loop 
+                muted 
+                playsinline
+                style="pointer-events: none; display: block;">
+            <source src="video/IGen_Video_Realworld.mp4" type="video/mp4" />
+        </video>
+        <p class="text-justify">
+        </p>
+    </div>
+</div>
+  
 <!-- 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -208,23 +298,35 @@
 
         
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Citation
-                </h3>
-                <div class="form-group col-md-10 col-md-offset-1">
-                    <textarea id="bibtex" class="form-control" readonly>
-@inproceedings{[CITATION_KEY],
-    title={IGen: Scalable Data Generation for Robot Learning from Open-World Images},
-    author={[AUTHOR_NAMES]},
-    booktitle={[CONFERENCE_NAME]},
-    year={[YEAR]}
-}
-                </textarea>
+            <div class="col-md-12">  <!-- 改为全宽，移除偏移 -->
+                <h3>Citation</h3>
+                <div class="form-group">  <!-- 移除偏移类 -->
+                    <textarea id="bibtex" class="form-control" readonly 
+                             style="height: 180px; 
+                                    resize: none; 
+                                    overflow-y: hidden; 
+                                    overflow-x: auto; 
+                                    white-space: pre; 
+                                    font-family: 'Courier New', monospace; 
+                                    font-size: 13px; 
+                                    line-height: 1.4;
+                                    margin-left: 0;
+                                    padding-left: 0;">
+        @misc{gu2025igenscalabledatageneration,
+            title={IGen: Scalable Data Generation for Robot Learning from Open-World Images}, 
+            author={Chenghao Gu and Haolan Kang and Junchao Lin and Jinghe Wang and Duo Wu and Shuzhao Xie and Fanding Huang and Junchen Ge and Ziyang Gong and Letian Li and Hongying Zheng and Changwei Lv and Zhi Wang},
+            year={2025},
+            eprint={2512.01773},
+            archivePrefix={arXiv},
+            primaryClass={cs.RO},
+            url={https://arxiv.org/abs/2512.01773}, 
+        }
+                    </textarea>
                 </div>
             </div>
         </div>
 
+        
         <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
